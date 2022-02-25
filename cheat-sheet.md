@@ -1,6 +1,6 @@
 # penetration-testing-useful-commands
 
-This page is a toolbox cheatsheet to help you for penetration testing
+This page is a toolbox cheatsheet to help you for penetration testing.
 
 ## Contributions are welcome!
 
@@ -16,7 +16,6 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [Tool 1](#Tool1)
 - [Tool 2](#Tool2)
 - [Tool 3](#Tool3)
-- 
 
 ### HTTP Web Server
 
