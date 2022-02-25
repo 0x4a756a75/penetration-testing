@@ -10,6 +10,7 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 
 ### Infrastructure
 - [HTTP Web Server](#HTTPWebServer)
+- [Linux](#Linux)
 
 ### Tools
 - [Tool 1](#Tool1)
@@ -28,3 +29,14 @@ npm install http-server -g # NodeJS
 http-server -p 8080  # NodeJS
 ```
 
+### Linux
+
+Index number, or inode, is a number that is unique to a file in the Unix filesystem:
+```bash
+0x4a756a75@nixfund:/etc$ ls -i | grep sudoers
+147627 sudoers
+```
+We can look at the whole structure after creating the parent directories with the tool tree . :
+```bash
+0x4a756a75@htb[/htb]$ tree .
+```
