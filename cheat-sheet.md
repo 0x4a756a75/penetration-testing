@@ -6,8 +6,6 @@ This page is a toolbox cheatsheet to help you for penetration testing
 
 Feel free to submit a pull request, with anything from small fixes to tools you'd like to add. If adding a new tool, **please add a brief description** that you think new penetration tester would understand.
 
-## HTTP Web Server
-
 ## Table of Contents
 
 ### Infrastructure
