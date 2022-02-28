@@ -10,7 +10,7 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 
 ### Infrastructure
 - [HTTP Web Server](#HTTPWebServer)
-- [Wi-Fi](#Wifi)
+- [Wi-Fi](#Wi-fi)
 - [Linux](#Linux)
 
 ### Tools
