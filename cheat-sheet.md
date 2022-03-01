@@ -175,3 +175,8 @@ Shortcuts:
 #### Marking Packets:
 
 To mark a packet, either right-click it in the Packet List pane and choose Mark Packet from the pop-up or click a packet in the Packet List pane and press cTRl-M. To unmark a packet, toggle this setting off by pressing cTRl-M again. You can mark as many packets as you wish in a capture. To jump forward and backward between marked packets, press shifT-cTRl-N and shifT-cTRl-B, respectively.
+
+#### Using Filters:
+
+• Capture filters are specified when packets are being captured and will capture only those packets that are specified for inclusion/exclusion in the given expression.
+• Display filters are applied to an existing set of captured packets in order to hide unwanted packets or show desired packets based on the speci- fied expression.
