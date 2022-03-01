@@ -15,8 +15,8 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
   - [Useful commands](#Wireshark)
   - [Shortcuts](#Wireshark)
   - [Hidden “Dot” Files](#Wireshark)
-  - [Important System Files](#Wireshark)
-  - [Important Directories](#Wireshark)
+  - [Important System Files](#Important-System-Files)
+  - [Important Directories](#Important-Directories)
 
 ### Tools
 - [Wireshark](#Wireshark)
