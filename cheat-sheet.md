@@ -12,6 +12,11 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [HTTP Web Server](#HTTPWebServer)
 - [Wi-Fi](#Wi-fi)
 - [Linux](#Linux)
+  - [Useful commands](#Wireshark)
+  - [Shortcuts](#Wireshark)
+  - [Hidden “Dot” Files](#Wireshark)
+  - [Important System Files](#Wireshark)
+  - [Important DIrectories](#Wireshark)
 
 ### Tools
 - [Wireshark](#Wireshark)
@@ -76,7 +81,8 @@ We can look at the whole structure after creating the parent directories with th
 ```bash
 0x4a756a75@htb[/htb]$ tree .
 ```
-Useful command reference and description:
+#### Useful command reference and description:
+
 ```bash
 man <tool> # Opens man pages for the specified tool.
 <tool> -h # Prints the help page of the tool.
@@ -151,7 +157,7 @@ wc # Prints newline, word, and byte counts for a given input.
 chmod # Changes permission of a file or directory.
 chown # Changes the owner and group of a file or directory.
 ```
-Shortcuts:
+#### Shortcuts:
 ```bash
 [CTRL] + A # Move the cursor to the beginning of the current line.
 [CTRL] + E # Move the cursor to the end of the current line.
@@ -171,6 +177,27 @@ Shortcuts:
 [CTRL] + [+] # Zoom in.
 [CTRL] + [-] # Zoom out.
 ```
+####Hidden “Dot” Files
+
+```bash
+.bash_history # For users of the bash shell, a file containing up to 500 of the most recent commands available for recall using the up and down arrow keys.
+.bash_logout # Script that is run by the bash shell when the user logs out of the system
+.bash_profile # Initialization script that is run by the bash shell upon login in order to setup variables and aliases.  When bash is started as the default login shell, it looks for the .bash_profile file in the user’s home directory; if not found, it looks for .bash_login.  If there is no .bash_login file, it then looks for a .profile file.
+.bashrc # Initialization script executed whenever the bash shell is started in some way other than a login shell. It is better to put system-wide functions and aliases in /etc/bashrc, which will be presented later in the book.
+.gtkrc # GTK initialization file.  GTK+ is a multi-platform toolkit for creating graphical user interfaces, used by a large number of applications.  It is the toolkit used by the GNU project's GNOME desktop.
+.login # The initialization script that is run whenever a user login occurs.
+.logout # The script that is automatically run whenever a user logout occurs.
+.profile # Put default system-wide environment variables in /etc/profile.
+.viminfo # Initialization file for the Vim text editor that is compatible with vi.
+.wm_style # Specifys the default window manager if one is not specified in startx
+.Xdefaults & .Xresources # Initialization files for Xterm resources for the user. Application program behavior can be changed by modifying these files.
+.xinitrc # The initialization file used when running startx, which can be used to activate applications and run a particular window manager.
+.xsession # This file is executed when a user logs in to an X-terminal and is used to automatically load the window manager and applications.
+```
+
+
+####Important System Files
+####Important DIrectories
 
 ### Wireshark
 
