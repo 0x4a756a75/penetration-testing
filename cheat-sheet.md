@@ -77,7 +77,7 @@ We can look at the whole structure after creating the parent directories with th
 
 ### Wireshark
 
-List all the available network Interfaces:
+Marking Packets:
 ```bash
-airmon-ng
+To mark a packet, either right-click it in the Packet List pane and choose Mark Packet from the pop-up or click a packet in the Packet List pane and press cTRl-M. To unmark a packet, toggle this setting off by pressing cTRl-M again. You can mark as many packets as you wish in a capture. To jump forward and backward between marked packets, press shifT-cTRl-N and shifT-cTRl-B, respectively.
 ```
