@@ -16,7 +16,7 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
   - [Shortcuts](#Wireshark)
   - [Hidden “Dot” Files](#Wireshark)
   - [Important System Files](#Wireshark)
-  - [Important DIrectories](#Wireshark)
+  - [Important Directories](#Wireshark)
 
 ### Tools
 - [Wireshark](#Wireshark)
@@ -243,8 +243,7 @@ chown # Changes the owner and group of a file or directory.
 
 #### Important DIrectories
 
-bash
-```
+```bash
 /bin # All binaries needed for the boot process and to run the system in single-user mode, including essential commands such as cd, ls, etc.
 /boot # Holds files used during the boot process along with the Linux kernel itself
 /dev # Contains device files for all hardware devices on the system
