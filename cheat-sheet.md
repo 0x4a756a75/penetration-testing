@@ -149,6 +149,26 @@ wc # Prints newline, word, and byte counts for a given input.
 chmod # Changes permission of a file or directory.
 chown # Changes the owner and group of a file or directory.
 ```
+Shortcuts:
+```bash
+[CTRL] + A # Move the cursor to the beginning of the current line.
+[CTRL] + E # Move the cursor to the end of the current line.
+[CTRL] + [←] / [→] # Jump at the beginning of the current/previous word.
+[ALT] + B / F # Jump backward/forward one word.
+[CTRL] + U # Erase everything from the current position of the cursor to the beginning of the line.
+[Ctrl] + K # Erase everything from the current position of the cursor to the end of the line.
+[Ctrl] + W # Erase the word preceding the cursor position.
+[Ctrl] + Y # Pastes the erased text or word.
+[CTRL] + C # Ends the current task/process by sending the SIGINT signal. For example, this can be a scan that is running by a tool. If we are watching the scan, we can stop it / kill this process by using this shortcut. While not configured and developed by the tool we are using. The process will be killed without asking us for confirmation.
+[CTRL] + D # Close STDIN pipe that is also known as End-of-File (EOF) or End-of-Transmission.
+[CTRL] + L # Clears the terminal. An alternative to this shortcut is the clear command you can type to clear our terminal.
+[CTRL] + Z # Suspend the current process by sending the SIGTSTP signal.
+[CTRL] + R # Search through command history for commands we typed previously that match our search patterns.
+[↑] / [↓] # Go to the previous/next command in the command history.
+[ALT] + [TAB] # Switch between opened applications.
+[CTRL] + [+] # Zoom in.
+[CTRL] + [-] # Zoom out.
+```
 
 ### Wireshark
 
