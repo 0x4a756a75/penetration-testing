@@ -178,8 +178,8 @@ To mark a packet, either right-click it in the Packet List pane and choose Mark 
 
 #### Using Filters:
 
-• Capture filters are specified when packets are being captured and will capture only those packets that are specified for inclusion/exclusion in the given expression.
-• Display filters are applied to an existing set of captured packets in order to hide unwanted packets or show desired packets based on the speci- fied expression.
+- Capture filters are specified when packets are being captured and will capture only those packets that are specified for inclusion/exclusion in the given expression.
+- Display filters are applied to an existing set of captured packets in order to hide unwanted packets or show desired packets based on the speci- fied expression.
 
 #### Protocol Field Filters:
 
