@@ -183,6 +183,21 @@ To mark a packet, either right-click it in the Packet List pane and choose Mark 
 
 #### Protocol Field Filters:
 
+#### ICMP (Internet Control Message Protocol)
+
+![Screenshot 2022-03-01 at 10 21 58 PM](https://user-images.githubusercontent.com/96379191/156186345-ac9c9825-5341-47b9-93de-f5974422f45c.png)
+
+The type field is located at the very beginning of a packet, which puts it at offset 0:
+```bash
+icmp[0] == 3 # Represent destination unreachable (type 3) messages
+icmp[0] == 8 || icmp[0] == 0 # Represent an echo request (type 8)
+icmp[0:2] == 0x0301 # Captures all ICMP destination-unreachable, host-unreachable packets, identified by type 3, code 1.
+```
+
+#### TCP (Transmission Control Protocol)
+
+![Screenshot 2022-03-01 at 10 22 45 PM](https://user-images.githubusercontent.com/96379191/156186431-c1520d64-4c2c-4255-a461-27e9239fac11.png)
+
 TCP packet are located at offset 13
 ```bash
 tcp[13] & 32 == 32 # TCP packets with the URG flag set
