@@ -177,7 +177,7 @@ chown # Changes the owner and group of a file or directory.
 [CTRL] + [+] # Zoom in.
 [CTRL] + [-] # Zoom out.
 ```
-####Hidden “Dot” Files
+#### Hidden “Dot” Files
 
 ```bash
 .bash_history # For users of the bash shell, a file containing up to 500 of the most recent commands available for recall using the up and down arrow keys.
@@ -195,9 +195,84 @@ chown # Changes the owner and group of a file or directory.
 .xsession # This file is executed when a user logs in to an X-terminal and is used to automatically load the window manager and applications.
 ```
 
+#### Important System Files
 
-####Important System Files
-####Important DIrectories
+```bash
+/boot/vmlinuz # The Linux kernel file.  File naming conventions may include release information
+/dev/fd0 # Device file for the first floppy disk drive on the system
+/dev/fd0H1440 # Device driver for the first floppy drive in high density mode, commonly invoked when formatting a floppy diskette for that density
+/dev/hda # Device file for the first IDE hard drive on the system
+/dev/hdc # Commonly, the IDE CDROM drive device file which often is a symbolic link called to /dev/cdrom, the real CDROM driver file.
+/dev/null  # A dummy device which contains nothing.  It is sometimes useful to send output to this device to make it go away forever.
+/etc/aliases # Contains aliases used by sendmail and other mail transport agents. Whenever this file is changed, the newaliases utility must be run to notify sendmail of the changes
+/etc/bashrc # Contains global defaults and aliases used by the bash shell
+/etc/crontab # A parent shell script to run commands periodically.  It invokes hourly, daily, weekly, and monthly scripts.
+/etc/exports # Contains a list of filesystems which may be made available to other systems on the network via NFS.
+/etc/fstab # The file system table contains the description of what disk devices are available at what mount points.
+/etc/group # Holds information regarding security group definitions.
+/etc/grub.conf # The grub boot loader configuration file
+/etc/hosts # Contains host names and their corresponding IP addresses used for name resolution whenever a DNS server is unavailable
+/etc/hosts.allow # Contains a list of hosts allowed to access services on this computer.
+/etc/hosts.deny # Contains a list of hosts forbidden to access services on this computer.
+/etc/inittab # Describes how the INIT process should set up the system in various runlevels
+/etc/issue # Contains the pre-login message, often overwritten by the /etc/rc.d/rc.local script in Red Hat and some other rpm-based Linux distributions
+/etc/lilo.conf # The lilo boot loader configuration file
+/etc/modules.conf # Holds options for configurable system modules
+/etc/motd # This is the ”message of the day” file which is printed upon login. It can be overwritten by /etc/rc.d/rc.local Red Hat on startup.
+/etc/mtab # Status information for currently mounted devices and partitions
+/etc/passwd # Contains information regarding registered system users. Passwords are typically kept in a shadow file for better security.
+/etc/printcap # Holds printer setup information
+/etc/profile # Contains global defaults for the bash shell
+/etc/resolv.conf # A list of domain name servers (DNS) used by the local machine
+/etc/securetty # This file contains a list of terminals where root can login
+/etc/termcap # An extensive ASCII text file defining the properties of consoles, terminals, and printers
+/proc/cpuinfo # Contains CPU related information
+/proc/filesystems # Holds information regarding filesystems that are currently in use
+/proc/interrupts # Stores the interrupts that are currently being used
+/proc/ioports # A list of the I/O addresses used by devices connected to the server
+/proc/meminfo # Contains memory usage information for both physical memory and swap
+/proc/modules # Lists currently loaded kernel modules
+/proc/mounts  # Displays currently mounted file systems
+/proc/stat # Contains various statistics about the system, such as the number of page faults since the system was last booted
+/proc/swaps # Holds swap file utilization information
+/proc/version # Contains Linux version information
+/var/log/lastlog # Stores information about the last boot process
+/var/log/messages # Contains messages produced by the syslog daemon during the boot process
+/var/log/wtmp # A binary data file holding login time and duration for each user currently on the system
+```
+
+#### Important DIrectories
+
+bash
+```
+/bin # All binaries needed for the boot process and to run the system in single-user mode, including essential commands such as cd, ls, etc.
+/boot # Holds files used during the boot process along with the Linux kernel itself
+/dev # Contains device files for all hardware devices on the system
+/etc # Files used by application subsystems such as mail, the Oracle database, etc.
+/etc/init.d # Contains various service startup scripts
+/etc/profile.d # Holds application setup scripts run by /etc/profile upon login
+/etc/rc.d # Contains subdirectories which contain run level specific scripts
+/etc/rc.d/init.d # run level initialization scripts
+/etc/rc.d/rc?.d # Where ‘?’ is a number corresponding to the default run level. Contains symbolic links to scripts which are in /etc/rc.d/init.d. for services to be started and stopped at the indicated run level.
+/etc/skel # Holds example dot files used to populate a new user's home directory.
+/etc/X11 # Contains subdirectories and configuration files for the X Window system
+/home # User home directories
+/lib # Some shared library directories, files, and links
+/mnt # The typical mount point for the user-mountable devices such as floppy drives and CDROM
+/proc # Virtual file system that provides system statistics.  It doesn't contain real files but provides an interface to runtime system information.
+/root # Home directory for the root user
+/sbin # Commands used by the super user for system administrative functions
+/tmp # A standard repository for temporary files created by applications and users.
+/usr # Directory contains subdirectories with source code, programs, libraries, documentation, etc.
+/usr/bin # Contains commands available to normal users
+/usr/bin/X11 # X Window system  binaries
+/usr/include # Holds include files used in C programs
+/usr/share # Contains shared directories for man files, info files, etc.
+/usr/lib # Library files searched by the linker when programs are compiled
+/usr/local/bin # Common executable application files local to this system
+/usr/sbin # Commands used by the super user for system administrative functions
+/var # Administrative files such as log files, locks, spool files, and temporary files used by various utilities
+```
 
 ### Wireshark
 
