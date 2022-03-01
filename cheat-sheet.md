@@ -15,6 +15,8 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 
 ### Tools
 - [Wireshark](#Wireshark)
+  - [ICMP (Internet Control Message Protocol)](#Wireshark)
+  - [TCP (Transmission Control Protocol)](#Wireshark)
 
 
 ### HTTP Web Server
