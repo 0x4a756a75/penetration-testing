@@ -284,8 +284,6 @@ To mark a packet, either right-click it in the Packet List pane and choose Mark 
 - Capture filters are specified when packets are being captured and will capture only those packets that are specified for inclusion/exclusion in the given expression.
 - Display filters are applied to an existing set of captured packets in order to hide unwanted packets or show desired packets based on the speci- fied expression.
 
-#### Protocol Field Filters:
-
 #### ICMP (Internet Control Message Protocol)
 
 ![Screenshot 2022-03-01 at 10 21 58 PM](https://user-images.githubusercontent.com/96379191/156186345-ac9c9825-5341-47b9-93de-f5974422f45c.png)
@@ -311,7 +309,6 @@ tcp[13] & 2 == 2 # TCP packets with the SYN flag set
 tcp[13] & 1 == 1 # TCP packets with the FIN flag set 
 tcp[13] == 18 # TCP SYN-ACK packets
 ```
-#### endpoints and network conversations
 
 #### Viewing Endpoint Statistics
 
