@@ -330,7 +330,11 @@ the type of activity occurring on a network such as 100 percent is Ethernet traf
 
 #### Using a Custom hosts File
 
-Choose Edit > Preferences > Name Resolution and select Only use the profile “hosts” file.
+Choose Edit > Preferences > Name Resolution and select Only use the profile “hosts” file. The file’s name should simply be hosts. No extension
+
+- Windows: <USERPROFILE>\Application Data\Wireshark\hosts
+- OS X: /Users/<username>/.wireshark/hosts
+- Linux: /home/<username>/.wireshark/hosts
 
 ![Screenshot 2022-03-02 at 4 41 04 PM](https://user-images.githubusercontent.com/96379191/156326015-097be447-4437-447c-b730-a262afb2dcb5.png)
 ![Screenshot 2022-03-02 at 4 41 07 PM](https://user-images.githubusercontent.com/96379191/156326049-9958d432-6980-4a5a-b007-003d3a31ffb8.png)
