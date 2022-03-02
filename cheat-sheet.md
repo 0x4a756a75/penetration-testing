@@ -317,3 +317,13 @@ Open the Wireshark’s Endpoints window (Statistics > Endpoints)
 #### Viewing Network Conversations
 
 Open the Wireshark Conversations window (Statistics > Conversations)
+
+#### Protocol hierarchy statistics
+
+Open the Protocol Hierarchy Statistics window, by choosing Statistics > Protocol Hierarchy. The Protocol Hierarchy Statistics window gives you a snapshot of
+the type of activity occurring on a network such as 100 percent is Ethernet traffic, 99.7 percent is IPv4, 98 percent is TCP, and 13.5 percent is HTTP from web browsing.
+
+#### WHOIS
+
+https://whois.arin.net/ui/
+https://www.robtex.com/
