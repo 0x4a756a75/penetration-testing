@@ -275,6 +275,12 @@ chown # Changes the owner and group of a file or directory.
 
 ### Wireshark
 
+#### Interface
+
+- Packet List
+- Packet Details
+- Packet Bytes
+
 #### Marking Packets:
 
 To mark a packet, either right-click it in the Packet List pane and choose Mark Packet from the pop-up or click a packet in the Packet List pane and press cTRl-M. To unmark a packet, toggle this setting off by pressing cTRl-M again. You can mark as many packets as you wish in a capture. To jump forward and backward between marked packets, press shifT-cTRl-N and shifT-cTRl-B, respectively.
