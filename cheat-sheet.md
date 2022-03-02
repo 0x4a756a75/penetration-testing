@@ -311,3 +311,12 @@ tcp[13] & 2 == 2 # TCP packets with the SYN flag set
 tcp[13] & 1 == 1 # TCP packets with the FIN flag set 
 tcp[13] == 18 # TCP SYN-ACK packets
 ```
+#### endpoints and network conversations
+
+#### Viewing Endpoint Statistics
+
+Open the Wireshark’s Endpoints window (Statistics > Endpoints)
+
+#### Viewing Network Conversations
+
+Open the Wireshark Conversations window (Statistics > Conversations)
