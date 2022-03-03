@@ -250,6 +250,13 @@ chown # Changes the owner and group of a file or directory.
 [ ] /usr/sbin # Commands used by the super user for system administrative functions
 [ ] /var # Administrative files such as log files, locks, spool files, and temporary files used by various utilities
 ```
+#### File Descriptors
+
+A file descriptor (FD) in Unix/Linux operating systems is an indicator of connection maintained by the kernel to perform Input/Output (I/O) operations
+  - Data Stream for Input = STDIN – 0
+  - Data Stream for Output = STDOUT – 1
+  - Data Stream for Output that relates to an error occurring = STDERR – 2
+
 
 ### Wireshark
 
