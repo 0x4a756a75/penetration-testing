@@ -279,6 +279,15 @@ The ARP resolution process uses only two packets: an ARP request and an ARP resp
 
 ![Screenshot 2022-03-03 at 1 06 07 PM](https://user-images.githubusercontent.com/96379191/156499943-d4b1ed17-1cfc-4198-b70e-50584bfe6887.png)
 
+Operation The function of the ARP packet: either 1 (=0x0001) for a request or 2 (=0x0002) for a reply
+
+- Broadcast: ff:ff:ff:ff:ff:ff
+- Unknow Addr. : 00:00:00:00:00:00
+
+Gratuitous ARP = where the source and destination IP are both set to the IP of the machine issuing the packet and the MAC is the broadcast address ff:ff:ff:ff:ff:ff.
+- To help detect IP conflicts. When a device receives an ARP request containing a source IP that matches its own, then it knows there is an IP address conflict.
+- In many cases, a device’s IP address can change. When this happens, the IP-to-MAC address mappings that hosts on the network have in their caches will be invalid.
+
 
 
 #### IP (Internet Protocol)
