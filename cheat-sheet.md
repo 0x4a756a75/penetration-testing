@@ -321,6 +321,7 @@ Ipv4 for 4.3 billion addresses.
 - 1111:0000:2222:0333:0044:0005:ffff:ffff
   - OK: 1111::2222:333:44:5:ffff:ffff
 
+![Screenshot 2022-03-03 at 2 44 42 PM](https://user-images.githubusercontent.com/96379191/156511292-18809627-c640-46df-9d14-55a925355820.png)
 ![casting_IPv6-min](https://user-images.githubusercontent.com/96379191/156509787-e9d77e9c-a2e3-47c9-9e18-7f4324dd191b.jpg)
 
 
