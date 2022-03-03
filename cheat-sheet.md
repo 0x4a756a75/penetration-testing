@@ -309,6 +309,8 @@ Ipv4 for 4.3 billion addresses.
   - Ethernet has a default MTU of 1,500, which means that the maximum packet size that can be transmitted over an Ethernet network is 1,500 bytes (not including the 14-byte Ethernet header itself).
   - When a device prepares to transmit an IP packet, it determines whether it must fragment the packet by comparing the packet’s data size to the MTU of the network interface from which the packet will be transmitted. If the data size is greater than the MTU, the packet will be fragmented.
   - The Fragment offset value is 1480. This is indicative of the 1,500-byte MTU, minus 20 bytes for the IP header.
+  - More Fragment: Flag = 0001 = Set
+  - Last Fragment: FLag = 0000 = No Set
 
 ##### IPv6
 
