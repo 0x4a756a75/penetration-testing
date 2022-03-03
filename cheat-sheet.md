@@ -291,12 +291,16 @@ Gratuitous ARP = where the source and destination IP are both set to the IP of t
 
 #### IP (Internet Protocol)
 
+##### IPv4
+
 ![Screenshot 2022-03-03 at 1 52 51 PM](https://user-images.githubusercontent.com/96379191/156504788-8f489022-fc33-4cc7-bf46-175a82827e68.png)
 
 - The Time to Live (TTL) value defines a period of time that can elapse or a maximum number of routers a packet can traverse before the packet is discarded for IPv4.
 - Packet fragmentation is a feature of IP that permits reliable delivery of data across varying types of networks by splitting a data stream into smaller fragments. 
-  - The fragmentation of a packet is based on the maximum transmission unit (MTU) size of the layer 2 data link protocol in use and the configura- tion of the devices using this layer 2 protocol. 
+  - The fragmentation of a packet is based on the maximum transmission unit (MTU) size of the layer 2 data link protocol in use and the configuration of the devices using this layer 2 protocol. 
   - Ethernet has a default MTU of 1,500, which means that the maximum packet size that can be transmitted over an Ethernet network is 1,500 bytes (not including the 14-byte Ethernet header itself).
+  - When a device prepares to transmit an IP packet, it determines whether it must fragment the packet by comparing the packet’s data size to the MTU of the network interface from which the packet will be transmitted. If the data size is greater than the MTU, the packet will be fragmented.
+  - The Fragment offset value is 1480. This is indicative of the 1,500-byte MTU, minus 20 bytes for the IP header.
 
 
 #### ICMP (Internet Control Message Protocol)
