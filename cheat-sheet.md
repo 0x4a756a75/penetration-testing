@@ -289,8 +289,14 @@ Gratuitous ARP = where the source and destination IP are both set to the IP of t
 - In many cases, a device’s IP address can change. When this happens, the IP-to-MAC address mappings that hosts on the network have in their caches will be invalid.
 
 
-
 #### IP (Internet Protocol)
+
+![Screenshot 2022-03-03 at 1 52 51 PM](https://user-images.githubusercontent.com/96379191/156504788-8f489022-fc33-4cc7-bf46-175a82827e68.png)
+
+- The Time to Live (TTL) value defines a period of time that can elapse or a maximum number of routers a packet can traverse before the packet is discarded for IPv4.
+- Packet fragmentation is a feature of IP that permits reliable delivery of data across varying types of networks by splitting a data stream into smaller fragments. 
+  - The fragmentation of a packet is based on the maximum transmission unit (MTU) size of the layer 2 data link protocol in use and the configura- tion of the devices using this layer 2 protocol. 
+  - Ethernet has a default MTU of 1,500, which means that the maximum packet size that can be transmitted over an Ethernet network is 1,500 bytes (not including the 14-byte Ethernet header itself).
 
 
 #### ICMP (Internet Control Message Protocol)
