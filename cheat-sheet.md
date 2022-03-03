@@ -268,6 +268,22 @@ To mark a packet, either right-click it in the Packet List pane and choose Mark 
 - Capture filters are specified when packets are being captured and will capture only those packets that are specified for inclusion/exclusion in the given expression.
 - Display filters are applied to an existing set of captured packets in order to hide unwanted packets or show desired packets based on the speci- fied expression.
 
+#### ARP (Address Resolution Protocol) 
+
+- Logical addresses allow for communication among multiple networks and indirectly connected devices. 
+- Physical addresses facilitate communica- tion on a single network segment for devices that are directly connected to each other with a switch.
+
+CAM = Content Addressable Memory (CAM) table : which lists the MAC addresses of all devices plugged into each of its ports. 
+
+The ARP resolution process uses only two packets: an ARP request and an ARP response 
+
+![Screenshot 2022-03-03 at 1 06 07 PM](https://user-images.githubusercontent.com/96379191/156499943-d4b1ed17-1cfc-4198-b70e-50584bfe6887.png)
+
+
+
+#### IP (Internet Protocol)
+
+
 #### ICMP (Internet Control Message Protocol)
 
 ![Screenshot 2022-03-01 at 10 21 58 PM](https://user-images.githubusercontent.com/96379191/156186345-ac9c9825-5341-47b9-93de-f5974422f45c.png)
