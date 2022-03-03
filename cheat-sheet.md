@@ -8,6 +8,11 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 
 ## Table of Contents
 
+### Penetration Testing Setup
+
+- [Organization](#Organization)
+- [Notes](#Notes)
+
 ### Infrastructure
 - [HTTP Web Server](#HTTPWebServer)
 - [Wi-Fi](#Wi-fi)
@@ -22,7 +27,100 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [Wireshark](#Wireshark)
   - [ICMP (Internet Control Message Protocol)](#Wireshark)
   - [TCP (Transmission Control Protocol)](#Wireshark)
+- [rkhunter](#rkhunter): rootkit, backdoor, sniffer and exploit scanner
+- [chkrootkit](#chkrootkit): chkrootkit is a tool to locally check for signs of a rootkit.
+- [lynis](#lynis): Auditing, system hardening, compliance testing
 
+
+### Organization
+
+#### Structure #1
+.
+└── Penetration-Testing
+	│
+	├── Pre-Engagement
+	│       └── ...
+    ├── Network-Pentesting
+	│       ├── Linux
+	│       │   ├── Information-Gathering
+	│		│   │   └── ...
+	│       │   ├── Vulnerability-Assessment
+    │       │   │	└── ...
+    │       │	└── ...
+    │       │    	└── ...
+    │		├── Windows
+    │ 		│   ├── Information-Gathering
+    │		│   │   └── ...
+    │		│   └── ...
+    │       └── ...
+    ├── WebApp-Pentesting
+	│       └── ...
+    ├── Social-Engineering
+	│       └── ...
+    ├── .......
+	│       └── ...
+    ├── Reporting
+    │   └── ...
+	└── Results
+	    └── ...
+
+#### Structure #2
+
+.
+└── Penetration-Testing
+	│
+	├── Pre-Engagement
+	│       └── ...
+    ├── Network-Pentesting
+	│       ├── Linux
+	│       │   ├── Information-Gathering
+	│		│   │   └── ...
+	│       │   ├── Vulnerability-Assessment
+    │       │   │	└── ...
+    │       │	└── ...
+    │       │    	└── ...
+    │		├── Windows
+    │ 		│   ├── Information-Gathering
+    │		│   │   └── ...
+    │		│   └── ...
+    │       └── ...
+    ├── WebApp-Pentesting
+	│       └── ...
+    ├── Social-Engineering
+	│       └── ...
+    ├── .......
+	│       └── ...
+    ├── Reporting
+    │   └── ...
+	└── Results
+	    └── ...
+      
+### Notes 
+
+#### Note-taking
+
+- CherryTree
+- https://www.notion.so/
+- https://obsidian.md/
+
+#### Results
+
+- GhostWriter
+- Pwndoc
+
+#### Logging
+
+Logging is essential for both documentation and our protection. If third parties attack the company during our penetration test and damage occurs, we can prove that the damage did not result from our activities. For this, we can use the tools script and date. Date can be used to display the exact date and time of each command in our command line. With the help of script, every command and the subsequent result is saved in a background file. To display the date and time, we can replace the PS1 variable in our .bashrc file with the following content.
+```
+PS1="\[\033[1;32m\]\342\224\200\$([[ \$(/opt/vpnbash.sh) == *\"10.\"* ]] && echo \"[\[\033[1;34m\]\$(/opt/vpnserver.sh)\[\033[1;32m\]]\342\224\200[\[\033[1;37m\]\$(/opt/vpnbash.sh)\[\033[1;32m\]]\342\224\200\")[\[\033[1;37m\]\u\[\033[01;32m\]@\[\033[01;34m\]\h\[\033[1;32m\]]\342\224\200[\[\033[1;37m\]\w\[\033[1;32m\]]\n\[\033[1;32m\]\342\224\224\342\224\200\342\224\200\342\225\274 [\[\e[01;33m\]$(date +%D-%r)\[\e[01;32m\]]\\$ \[\e[0m\]"
+-----
+script 03-21-2021-0200pm-exploitation.log # Start the tool script and log in the .log file
+```
+
+#### Screenshots + Recording
+
+- Flameshot
+- Peek - Create GIFs that record all the required actions for us.
 
 ### HTTP Web Server
 
