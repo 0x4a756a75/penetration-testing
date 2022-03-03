@@ -253,10 +253,20 @@ chown # Changes the owner and group of a file or directory.
 #### File Descriptors
 
 A file descriptor (FD) in Unix/Linux operating systems is an indicator of connection maintained by the kernel to perform Input/Output (I/O) operations
-  - Data Stream for Input = STDIN – 0
-  - Data Stream for Output = STDOUT – 1
-  - Data Stream for Output that relates to an error occurring = STDERR – 2
+  - Data Stream for Input = STDIN – 0 => Input from Keyboard
+  - Data Stream for Output = STDOUT – 1 => Display after input from keyboard
+  - Data Stream for Output that relates to an error occurring = STDERR – 2 => Such as "Permission Denied"
 
+```
+find /etc/ -name shadow 2>/dev/null # This way, we redirect the resulting errors to the "null device," which discards all data
+find /etc/ -name shadow 2>/dev/null > results.txt # Redirect to a file with the name results.txt that will only contain standard output without the standard errors. When we use the greater-than sign (>) to redirect our STDOUT, a new file is automatically created if it does not already exist.
+find /etc/ -name shadow 2> stderr.txt 1> stdout.txt # Redirect STDOUT and STDERR to Separate Files
+cat < stdout.txt # Redirect STDIN
+find /etc/ -name passwd >> stdout.txt 2>/dev/null # Redirect STDOUT and Append to a File
+find /etc/ -name *.conf 2>/dev/null | grep systemd # Any errors are redirected to the "null device" (/dev/null). Using grep, we filter out the results and specify that only the lines containing the pattern "systemd" should be displayed.
+find /etc/ -name *.conf 2>/dev/null | grep systemd | wc -l # we will use the tool called wc, which should count the total number of obtained results.
+
+```
 
 ### Wireshark
 
