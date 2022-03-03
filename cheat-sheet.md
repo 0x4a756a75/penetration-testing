@@ -125,6 +125,7 @@ less # An alternative to more with more features.
 head # Prints the first ten lines of STDOUT or a file.
 tail # Prints the last ten lines of STDOUT or a file.
 sort # Sorts the contents of STDOUT or a file.
+----
 grep # Searches for specific results that contain given patterns.
 cut # Removes sections from each line of files.
 tr # Replaces certain characters.
@@ -132,6 +133,7 @@ column # Command-line based utility that formats its input into multiple columns
 awk # Pattern scanning and processing language.
 sed # A stream editor for filtering and transforming text.
 wc # Prints newline, word, and byte counts for a given input.
+----
 chmod # Changes permission of a file or directory.
 chown # Changes the owner and group of a file or directory.
 ```
