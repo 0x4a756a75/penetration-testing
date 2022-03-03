@@ -291,7 +291,15 @@ Gratuitous ARP = where the source and destination IP are both set to the IP of t
 
 #### IP (Internet Protocol)
 
+##### Classes
+
+![image](https://user-images.githubusercontent.com/96379191/156510403-26fccf83-3cf8-4afd-aff4-b866aaf2cc7d.png)
+![Screenshot 2022-03-03 at 2 39 53 PM](https://user-images.githubusercontent.com/96379191/156510471-e2d92d8c-753a-43a6-9a25-f87aaafb396a.png)
+
+
 ##### IPv4
+
+Ipv4 for 4.3 billion addresses.
 
 ![Screenshot 2022-03-03 at 1 52 51 PM](https://user-images.githubusercontent.com/96379191/156504788-8f489022-fc33-4cc7-bf46-175a82827e68.png)
 
@@ -301,6 +309,17 @@ Gratuitous ARP = where the source and destination IP are both set to the IP of t
   - Ethernet has a default MTU of 1,500, which means that the maximum packet size that can be transmitted over an Ethernet network is 1,500 bytes (not including the 14-byte Ethernet header itself).
   - When a device prepares to transmit an IP packet, it determines whether it must fragment the packet by comparing the packet’s data size to the MTU of the network interface from which the packet will be transmitted. If the data size is greater than the MTU, the packet will be fragmented.
   - The Fragment offset value is 1480. This is indicative of the 1,500-byte MTU, minus 20 bytes for the IP header.
+
+##### IPv6
+
+- 1111:0000:2222:0000:3333:4444:5555:6666
+  - OK: 1111::2222:0000:3333:4444:5555:6666 
+  - NOK: 1111::2222::3333:4444:5555:6666
+
+- 1111:0000:2222:0333:0044:0005:ffff:ffff
+  - OK: 1111::2222:333:44:5:ffff:ffff
+
+![casting_IPv6-min](https://user-images.githubusercontent.com/96379191/156509787-e9d77e9c-a2e3-47c9-9e18-7f4324dd191b.jpg)
 
 
 #### ICMP (Internet Control Message Protocol)
