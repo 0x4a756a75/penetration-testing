@@ -205,7 +205,101 @@ Using SSH Keys:
 ```
 0x4a756a75@htb[/htb]$ ssh root@<vps-ip-address> -i vps-ssh-test
 [test@VPS ~]$ 
+```
 
+#### VPS Hardening
+
+- Install Fail2ban
+- Working only with SSH keys
+- Reduce Idle timeout interval
+- Disable passwords
+- Disable x11 forwarding
+- Use a different port
+- Limit users' SSH access
+- Disable root logins
+- Use SSH proto 2
+- Enable 2FA Authentication for SSH
+
+Update the System:
+```
+sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
+```
+
+#### SSH Hardening: 
+
+/etc/ssh/sshd_config File for SSH Hardening
+```
+sudo apt install fail2ban -y # Once we have installed it, we can find the configuration file at /etc/fail2ban/jail.conf
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.conf.bak # Make a backup
+```
+/etc/fail2ban/jail.conf File
+```
+# [sshd]
+enabled = true
+bantime = 4w # set the ban time to four weeks
+maxretry = 3 # allow a maximum of 3 attempts.
+```
+Editing OpenSSH Config
+```
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+sudo vim /etc/ssh/sshd_config
+---------
+LogLevel VERBOSE # Gives the verbosity level that is used when logging messages from SSH daemon.
+PermitRootLogin no # Specifies whether root can log in using SSH.
+MaxAuthTries 3 # Specifies the maximum number of authentication attempts permitted per connection.
+MaxSessions 5 # Specifies the maximum number of open shell, login, or subsystem (e.g., SFTP) sessions allowed per network connection.
+HostbasedAuthentication no # Specifies whether rhosts or /etc/hosts.equiv authentication together with successful public key client host authentication is allowed (host-based authentication).
+PermitEmptyPasswords no	When password authentication is allowed, it specifies whether the server allows login to accounts with empty password strings.
+ChallengeResponseAuthentication yes # Specifies whether challenge-response authentication is allowed.
+UsePAM yes # Specifies if PAM modules should be used for authentification.
+X11Forwarding no # Specifies whether X11 forwarding is permitted.
+PrintMotd no # Specifies whether SSH daemon should print /etc/motd when a user logs in interactively.
+ClientAliveInterval 600 # Sets a timeout interval in seconds, after which if no data has been received from the client, the SSH daemon will send a message through the encrypted channel to request a response from the client.
+ClientAliveCountMax 0 # Sets the number of client alive messages which may be sent without SSH daemon receiving any messages back from the client.
+AllowUsers <username> # This keyword can be followed by a list of user name patterns, separated by spaces. If specified, login is allowed only for user names that match one of the patterns.
+Protocol 2 # Specifies the usage of the newer protocol with is more secure.
+AuthenticationMethods publickey,keyboard-interactive # Specifies the authentication methods that must be successfully completed for a user to be granted access.
+PasswordAuthentication no # Specifies whether password authentication is allowed.
+```
+#### 2FA Authentication
+
+Installing Google-Authenticator PAM Module
+```
+sudo apt install libpam-google-authenticator -y
+google-authenticator
+```
+2FA PAM Configuration:
+```
+sudo cp /etc/pam.d/sshd /etc/pam.d/sshd.bak
+sudo vim /etc/pam.d/sshd
+```
+/etc/pam.d/sshd => We comment out the "@include common-auth" line by putting a "#" in front of it. Besides, we add two new lines at the end of the file, as follows:
+```
+#@include common-auth 
+auth required pam_google_authenticator.so
+auth required pam_permit.so
+```
+/etc/ssh/sshd_config => Next, we need to adjust our settings in our SSH daemon to allow this authentication method. In this configuration file (/etc/ssh/sshd_config), we need to add two new lines at the end of the file as follows:
+```
+AuthenticationMethods publickey,keyboard-interactive
+PasswordAuthentication no
+# Finally, we have to restart the SSH server to apply the new configurations and settings.
+```
+Restart SSH Server
+```
+sudo service ssh restart # 
+```
+2FA SSH Login => Now we can test this and try to login to the SSH server with our SSH key and check if everything works as intended.
+```
+ssh cry0l1t3@VPS -i cry0l1t3
+```
+SCP Syntax => Finally, we can transfer all our resources, scripts, notes, and other components to the VPS using SCP.
+```
+scp -i <ssh-private-key> -r <directory to transfer> <username>@<IP/FQDN>:<path>
+```
+Resources Transfer
+```
+scp -i ~/.ssh/cry0l1t3 -r ~/Pentesting cry0l1t3@VPS:~/
 ```
 
 ### Windows
