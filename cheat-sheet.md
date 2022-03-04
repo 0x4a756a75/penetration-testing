@@ -25,6 +25,7 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
   - [Hidden “Dot” Files](#Wireshark)
   - [Important System Files](#Important-System-Files)
   - [Important Directories](#Important-Directories)
+- [SMB](#smb)
 
 ### Tools
 - [Wireshark](#Wireshark)
@@ -667,14 +668,17 @@ the type of activity occurring on a network such as 100 percent is Ethernet traf
 
 Choose Edit > Preferences > Name Resolution and select Only use the profile “hosts” file. The file’s name should simply be hosts. No extension
 
+![Screenshot 2022-03-02 at 4 41 04 PM](https://user-images.githubusercontent.com/96379191/156326015-097be447-4437-447c-b730-a262afb2dcb5.png)
+![Screenshot 2022-03-02 at 4 41 07 PM](https://user-images.githubusercontent.com/96379191/156326049-9958d432-6980-4a5a-b007-003d3a31ffb8.png)
+
 - Windows: <USERPROFILE>\Application Data\Wireshark\hosts
 - OS X: /Users/<username>/.wireshark/hosts
 - Linux: /home/<username>/.wireshark/hosts
 
-![Screenshot 2022-03-02 at 4 41 04 PM](https://user-images.githubusercontent.com/96379191/156326015-097be447-4437-447c-b730-a262afb2dcb5.png)
-![Screenshot 2022-03-02 at 4 41 07 PM](https://user-images.githubusercontent.com/96379191/156326049-9958d432-6980-4a5a-b007-003d3a31ffb8.png)
-	
+#### SMB
+```	
+smbclient -N -L \\\\10.129.42.253 # The -L flag specifies that we want to retrieve a list of available shares on the remote host, while -N suppresses the password prompt.
+smbclient \\\\10.129.42.253\\users # This reveals the non-default share users. Let us attempt to connect as the guest user.
+smb: \bob\> get passwords.txt # Download text
 
-
-
-
+```
