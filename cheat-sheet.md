@@ -17,6 +17,8 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [VM Vs Containers](#HTTPWebServer)
 - [HTTP Web Server](#HTTPWebServer)
 - [Wi-Fi](#Wi-fi)
+- [Service Provider and Key Generation](#Wi-fi)
+- [Windows](#Windows)
 - [Linux](#Linux)
   - [Useful commands](#Wireshark)
   - [Shortcuts](#Wireshark)
@@ -173,6 +175,44 @@ airmon-ng stop wlan0mon # Stop Wi-Fi interface monitoring
 aircrack-ng -w wordlist psk*.cap # Cracking password from the captured handshake file
 ```
 
+### Service Provider and Key Generation
+
+- https://www.vultr.com/products/cloud-compute/
+- https://www.linode.com/pricing/
+- https://www.digitalocean.com/pricing
+- https://onehostcloud.hosting/
+
+Generation Private and Public keys for SSH:
+```
+ssh-keygen -t rsa -b 4096 -f vps-ssh
+```
+
+Adding a New Sudo User:
+```
+adduser test
+usermod -aG sudo test
+su - test
+```
+
+Adding Public SSH Key to VPS:
+```
+[test@VPS ~]$ mkdir ~/.ssh
+[test@VPS ~]$ echo '<vps-ssh.pub>' > ~/.ssh/authorized_keys
+[test@VPS ~]$ chmod 600 ~/.ssh/authorized_keys
+```
+
+Using SSH Keys:
+```
+0x4a756a75@htb[/htb]$ ssh root@<vps-ip-address> -i vps-ssh-test
+[test@VPS ~]$ 
+
+```
+
+### Windows
+
+- Windows Subsystem for Linux (WSL) is an excellent example of this. It allows for Linux operating systems to run alongside our Windows install. This can help us by giving us a space to run tools developed for Linux right inside our Windows host without the need for a hypervisor program or installation of a third-party application such as VirtualBox or Docker.
+- Chocolatey Package Manager is a free and open software package management solution that can manage the installation and dependencies for our software packages and scripts. 
+
 ### Linux
 
 Index number, or inode, is a number that is unique to a file in the Unix filesystem:
@@ -184,6 +224,9 @@ We can look at the whole structure after creating the parent directories with th
 ```bash
 0x4a756a75@htb[/htb]$ tree .
 ```
+
+- Logical Volume Manager (LVM) = LVM is a partitioning scheme mainly used in Unix and Linux environments, which provides a level of abstraction between disks, partitions, and file systems. Using LVM, it is possible to form dynamically changeable partitions, which can also extend over several disks. In this case, we will install all files in one partition.
+
 #### Useful command reference and description:
 
 ```bash
