@@ -8,12 +8,13 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 
 ## Table of Contents
 
-### Penetration Testing Setup
+### Setup
 
 - [Organization](#Organization)
 - [Notes](#Notes)
 
 ### Infrastructure
+- [VM Vs Containers](#HTTPWebServer)
 - [HTTP Web Server](#HTTPWebServer)
 - [Wi-Fi](#Wi-fi)
 - [Linux](#Linux)
@@ -121,6 +122,32 @@ script 03-21-2021-0200pm-exploitation.log # Start the tool script and log in the
 
 - Flameshot
 - Peek - Create GIFs that record all the required actions for us.
+
+
+### VM Vs Containers
+
+![Screenshot 2022-03-04 at 11 00 37 AM](https://user-images.githubusercontent.com/96379191/156691222-865791ba-c4d2-43a7-9e69-2c902c7fd52f.png)
+
+- Virtual Machine	
+   - Contain applications and the complete operating system	
+   - A hypervisor such as VMware ESXi provides virtualization
+   - Multiple VMs run in isolation from each other on a physical server
+   	
+- Containers
+   - Contain applications and only the necessary operating system components such as libraries and binaries
+   - The operating system with the container engine provides its own virtualization
+   - Several containers run isolated from each other on one operating system
+
+
+Orchestration systems = These systems distribute the containers over the existing hardware based on predefined rules and monitor them.
+   - Apache Mesos
+   - Google Kubernetes
+
+- Docker Engine = Docker Engine is the main component of container virtualization. The software provides the interface between host resources and running containers. Any system that has Docker Engine installed can use Docker containers.
+- Vagrant 
+   - Vagrant is a tool that can create, configure and manage virtual machines or virtual machine environments. 
+   - The VMs are not created and configured manually but are described in code in a Vagrantfile.
+   - It tries to simplify the software configuration management of virtualization in order to increase development productivity.
 
 ### HTTP Web Server
 
