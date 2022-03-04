@@ -33,6 +33,9 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [rkhunter](#rkhunter): rootkit, backdoor, sniffer and exploit scanner
 - [chkrootkit](#chkrootkit): chkrootkit is a tool to locally check for signs of a rootkit.
 - [lynis](#lynis): Auditing, system hardening, compliance testing
+- [Shell](#shell)
+- [Netcat](#netcat): Its list of features includes port scanning, transferring files, and port listening: as with any server, it can be used as a backdoor.
+- [Socat](#socat): It is larger and more flexible and has more options that must be configured for a given task. 
 
 
 ### Organization
@@ -569,6 +572,16 @@ Gratuitous ARP = where the source and destination IP are both set to the IP of t
 - To help detect IP conflicts. When a device receives an ARP request containing a source IP that matches its own, then it knows there is an IP address conflict.
 - In many cases, a device’s IP address can change. When this happens, the IP-to-MAC address mappings that hosts on the network have in their caches will be invalid.
 
+#### Shell
+
+- Reverse shell	= Initiates a connection back to a "listener" on our attack box.
+- Bind shell = "Binds" to a specific port on the target host and waits for a connection from our attack box.
+- Web shell = Runs operating system commands via the web browser, typically not interactive or semi-interactive. It can also be used to run single commands (i.e., leveraging a file upload vulnerability and uploading a PHP script to run a single command.
+
+#### Ports
+
+- https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html
+- https://packetlife.net/media/library/23/common-ports.pdf
 
 #### IP (Internet Protocol)
 
@@ -660,4 +673,8 @@ Choose Edit > Preferences > Name Resolution and select Only use the profile “h
 
 ![Screenshot 2022-03-02 at 4 41 04 PM](https://user-images.githubusercontent.com/96379191/156326015-097be447-4437-447c-b730-a262afb2dcb5.png)
 ![Screenshot 2022-03-02 at 4 41 07 PM](https://user-images.githubusercontent.com/96379191/156326049-9958d432-6980-4a5a-b007-003d3a31ffb8.png)
+	
+
+
+
 
