@@ -2,7 +2,9 @@
 
 - [Introduction](#Introduction)
 - [Web Application Layout](#Web-Application-Layout)
-
+  - [Web Application Infrastructure](#Web-Application-Infrastructure)
+  - [Web Application Components](#Web-Application-Components)
+  - [Web Application Architecture](#Web-Application-Architecture)
 
 ## Introduction
 
@@ -14,3 +16,13 @@
 - OWASP TOP10 = https://owasp.org/Top10/
 
 ## Web Application Layout
+
+| Category | Description | 
+| --- | --- | 
+| Web Application Infrastructure | Describes the structure of required components, such as the database, needed for the web application to function as intended. Since the web application can be set up to run on a separate server, it is essential to know which database server it needs to access. | 
+| Web Application Components | The components that make up a web application represent all the components that the web application interacts with. These are divided into the following three areas: UI/UX, Client, and Server components. | 
+| Web Application Architecture | Architecture comprises all the relationships between the various web application components. | 
+
+### Web Application Infrastructure
+### Web Application Components
+### Web Application Architecture
