@@ -42,6 +42,8 @@ Feel free to submit a pull request, with anything from small fixes to tools you'
 - [ffuf](#ffuf)
 - [exploitdb](#exploitdb)
 - [Metasploit](#metasploit)
+- [Impacket](#Impacket): Impacket is a collection of Python3 classes focused on providing access to network packets. Impacket allows Python3 developers to craft and decode network packets in simple and consistent manner
+- [ModSec](#modsec): WAF https://owasp.org/www-project-modsecurity-core-rule-set/
 
 
 
