@@ -192,9 +192,18 @@ aircrack-ng -w wordlist psk*.cap # Cracking password from the captured handshake
 - https://www.digitalocean.com/pricing
 - https://onehostcloud.hosting/
 
+File to SSH => /home/user/.ssh/id_rsa or /root/.ssh/id_rsa
+```
+vim id_rsa
+chmod 600 id_rsa
+ssh user@10.10.10.10 -i id_rsa # If we can read the /root/.ssh/ directory and can read the id_rsa file, we can copy it to our machine and use the -i flag to log in with it
+```
+
 Generation Private and Public keys for SSH:
 ```
 ssh-keygen -t rsa -b 4096 -f vps-ssh
+------
+ssh-keygen -f key # New key with ssh-keygen and the -f flag to specify the output file:
 ```
 
 Adding a New Sudo User:
@@ -596,7 +605,14 @@ nc -lvnp 1234 # The first step is to start a netcat listener on a port of our ch
 ```
 - Bind shell = "Binds" to a specific port on the target host and waits for a connection from our attack box.
 - Web shell = Runs operating system commands via the web browser, typically not interactive or semi-interactive. It can also be used to run single commands (i.e., leveraging a file upload vulnerability and uploading a PHP script to run a single command.
-
+```
+default webroots for common web servers:
+------
+Apache # /var/www/html/
+Nginx # /usr/local/nginx/html/
+IIS # c:\inetpub\wwwroot\
+XAMPP # C:\xampp\htdocs\
+```
 #### Ports
 
 - https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html
