@@ -1,0 +1,16 @@
+
+- nmap = Network Mapper
+- Wireshark
+- [rkhunter](#rkhunter): rootkit, backdoor, sniffer and exploit scanner
+- [chkrootkit](#chkrootkit): chkrootkit is a tool to locally check for signs of a rootkit.
+- [lynis](#lynis): Auditing, system hardening, compliance testing
+- [Shell](#shell)
+- [Netcat](#netcat): Its list of features includes port scanning, transferring files, and port listening: as with any server, it can be used as a backdoor.
+- [Socat](#socat): It is larger and more flexible and has more options that must be configured for a given task. 
+- [Testssl.sh](#testssl.sh): Checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws and more. https://testssl.sh/
+- [Gobuster](#gobuster)
+- [ffuf](#ffuf)
+- [exploitdb](#exploitdb)
+- [Metasploit](#metasploit)
+- [Impacket](#Impacket): Impacket is a collection of Python3 classes focused on providing access to network packets. Impacket allows Python3 developers to craft and decode network packets in simple and consistent manner
+- [ModSec](#modsec): WAF https://owasp.org/www-project-modsecurity-core-rule-set/. In Apache, it is a module
