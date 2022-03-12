@@ -28,3 +28,6 @@ The example workflow proceeds now as follows:
 
 ![Screenshot 2022-03-12 at 4 34 17 PM](https://user-images.githubusercontent.com/96379191/158010613-83578bb0-c5d2-43c9-b422-1ebef89d4e35.png)
 
+[SAML-vs-OAuth-2.0-vs-OpenID-Connect.pdf](https://github.com/0x4a756a75/penetration-testing/files/8237304/SAML-vs-OAuth-2.0-vs-OpenID-Connect.pdf)
+
+
