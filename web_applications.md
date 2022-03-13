@@ -1,8 +1,11 @@
 # Table of content
 
-Link: https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools
+- https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools
+- https://geekflare.com/open-source-web-security-scanner/
 
-## SAST Tools
+## Application Security Tools
+
+### SAST Tools
 
 - GitHub code scanning
 - CodeQL 
@@ -11,7 +14,7 @@ Link: https://owasp.org/www-community/Free_for_Open_Source_Application_Security_
 - Xanitizer 
 - HCL AppScan CodeSweep 
 
-## DAST Tools
+### DAST Tools
 
 - OWASP ZAP - one of the famous penetration testing tools which is actively updated by hundreds of volunteer worldwide.
 - StackHawk
@@ -29,7 +32,14 @@ Link: https://owasp.org/www-community/Free_for_Open_Source_Application_Security_
 - Golismero - A framework to manage and run some of the popular security tools like Wfuzz, DNS recon, sqlmap, OpenVas, robot analyzer, etc.).
 - OWASP Xenotix XSS - Advanced framework to find and exploit cross-site scripting. It got inbuilt three intelligent fuzzers for a fast scan and improved results.
 
-## IAST Tools
+### IAST Tools
 
 - Maven Versions plugin
 - Dependabot
+
+## WAF
+
+- ModSecurity - One of the most popular web application firewalls, and it supports Apache HTTP, Microsoft IIS & Nginx.
+- NAXSI - Nginx Anti-XSS & SQL Injection.
+- WebKnight - WAF is for Microsoft IIS
+- Shadow Daemon - Detect, record, and prevent web attacks by filtering request from malicious parameters
