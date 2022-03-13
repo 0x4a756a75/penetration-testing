@@ -1,28 +1,35 @@
 # Table of content
 
-- [Introduction](#Introduction)
-- [Web Application Layout](#Web-Application-Layout)
-  - [Web Application Infrastructure](#Web-Application-Infrastructure)
-  - [Web Application Components](#Web-Application-Components)
-  - [Web Application Architecture](#Web-Application-Architecture)
+Link: https://owasp.org/www-community/Free_for_Open_Source_Application_Security_Tools
 
-## Introduction
+## SAST Tools
 
-![Screenshot 2022-03-05 at 11 41 36 PM](https://user-images.githubusercontent.com/96379191/156890224-fa57b426-e5f5-433e-a400-f60ab8037055.png)
+- GitHub code scanning
+- CodeQL 
+- Coverity Scan Static Analysis 
+- reshift
+- Xanitizer 
+- HCL AppScan CodeSweep 
 
-- Penetration Testing Method: OWASP Web Security Testing Guide = https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing
-- Often find SQL injection vulnerabilities on web applications that use Active Directory for authentication. 
-- Password spraying is a type of brute-force attack in which a malicious actor uses a single password against targeted user accounts before moving on to attempt a second password, and so on. This technique allows the actor to remain undetected by avoiding rapid or frequent account lockouts.
-- OWASP TOP10 = https://owasp.org/Top10/
+## DAST Tools
 
-## Web Application Layout
+- OWASP ZAP - one of the famous penetration testing tools which is actively updated by hundreds of volunteer worldwide.
+- StackHawk
+- Arachni 
+- VWT Digital’s sec-helpers
+- OWASP purpleteam 
+- XssPy
+- w3af
+- Nikto
+- Wfuzz
+- Wapiti - It scans the web pages of a given target and looks for scripts and forms to inject the data to see if that is vulnerable. It is not a source code security checks; instead, it performs black-box scans.
+- Vega - a multi-platform supported tool written in Java to find XSS, SQLi, RFI, and many other vulnerabilities.
+- SQLmap
+- Grabber - It’s a small tool based on Python and does a few things quite well.
+- Golismero - A framework to manage and run some of the popular security tools like Wfuzz, DNS recon, sqlmap, OpenVas, robot analyzer, etc.).
+- OWASP Xenotix XSS - Advanced framework to find and exploit cross-site scripting. It got inbuilt three intelligent fuzzers for a fast scan and improved results.
 
-| Category | Description | 
-| --- | --- | 
-| Web Application Infrastructure | Describes the structure of required components, such as the database, needed for the web application to function as intended. Since the web application can be set up to run on a separate server, it is essential to know which database server it needs to access. | 
-| Web Application Components | The components that make up a web application represent all the components that the web application interacts with. These are divided into the following three areas: UI/UX, Client, and Server components. | 
-| Web Application Architecture | Architecture comprises all the relationships between the various web application components. | 
+## IAST Tools
 
-### Web Application Infrastructure
-### Web Application Components
-### Web Application Architecture
+- Maven Versions plugin
+- Dependabot
